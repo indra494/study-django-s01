@@ -1,0 +1,38 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'join/css/style.css' %}" />
+<script type="text/javascript" src="{% static 'join/js/join.js' %}"></script>
+<div class="top-box">
+  <a href="{% url 'join:writeView' %}" class="btn-01">가입</a>
+  <div class="top-nick">indra</div>
+</div>
+
+{% if member_list %}
+<table class="tbl-list">
+  <colgroup>
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+    <col width="25%" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>아이디</th>
+      <th>이름</th>
+      <th>나이</th>
+      <th>가입일</th>
+    </tr>
+  </thead>
+  {% for member in member_list %}
+  <tr
+    onClick="javascript:join.goDetail('{% url 'join:detailView' member.mem_id %}');"
+  >
+    <td>{{ member.mem_id }}</td>
+    <td>{{ member.mem_name }}</td>
+    <td>{{ member.mem_age }}</td>
+    <td>{{ member.mem_join_date|date:'Y-m-d H:i:s' }}</td>
+  </tr>
+  {% endfor %}
+</table>
+{% else %}
+<p>No join data</p>
+{% endif %}

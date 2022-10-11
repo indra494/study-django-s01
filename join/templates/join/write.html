@@ -1,0 +1,57 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'join/css/style.css' %}" />
+<script type="text/javascript" src="{% static 'join/js/join.js' %}"></script>
+<div class="top-box">
+  <a href="{% url 'join:indexView' %}" class="btn-02">뒤로</a>
+  <div class="top-nick">indra</div>
+</div>
+
+<form action="{% url 'join:save' %}" method="post">
+    {% csrf_token %}
+    <table class="tbl-write">
+        <colgroup>
+            <col width="70px" />
+            <col width="*" />
+        </colgroup>
+        <tbody>    
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" class="input01" name="mem_id" id="mem_id" /></td>        
+            </tr>
+            <tr>
+                <th>이름</th>
+                <td><input type="text" class="input01" name="mem_name" id="mem_name" /></td>        
+            </tr>    
+            <tr>
+                <th>나이</th>
+                <td><input type="number" class="input01" name="mem_age" id="mem_age" /></td>        
+            </tr>     
+        </tbody>   
+    </table>
+    <hr />
+
+    <table class="tbl-write">
+        <colgroup>
+            <col width="70px" />
+            <col width="*" />
+        </colgroup>
+        <tbody>    
+            <tr>
+                <th>취미</th>
+                <td>
+                    <ul class='mt-5'>
+                        <li><input type="text" class="input01"  name="hobby_text" /></li>
+                        <li><a href='#' name="btn_del_hobby" class="btn-03" onClick="javascript:join.delHobbyForm(this);">-</a></li>                
+                        <li><a href='#' name="btn_add_hobby" class="btn-03" onClick="javascript:join.addHobbyForm(this);">+</a></li>                            
+                    </ul>
+                </td>        
+            </tr>
+        </tbody>   
+    </table>
+    <hr />
+
+    <input type="submit" class="btn-04" value="저장" />
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+</form>

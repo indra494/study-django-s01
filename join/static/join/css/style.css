@@ -1,0 +1,144 @@
+a {
+    text-decoration: none;
+}
+
+.top-box {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #5A5A5A;
+    background-color: #dfdfdf;
+}
+
+.top-box a {
+    color: #fff;
+}
+
+.top-box .top-nick {
+    float: right;
+    color: #B4B4B4;
+    font-weight: bold;
+    margin: 25px 10px;
+}
+
+.btn-01 {
+    background-color: #5A5A5A;
+    padding: 5px 15px 5px 15px;
+    float: left;
+    font-weight: bold;
+    margin: 8px;
+}
+
+.btn-01:hover {
+    color: #fff;
+    background-color: #484848;
+}
+
+.btn-02 {
+    background-color: #5A5A5A;
+    padding: 5px 15px 5px 30px;
+    float: left;
+    font-weight: bold;
+    margin: 8px;
+    background-image: url("../images/img-back.png");
+    background-size: 30px 30px;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+
+.btn-02:hover {
+    color: #fff;
+    background-color: #484848;
+}
+
+.btn-03 {
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.btn-04 {
+    font-weight: bold;
+    font-size: 26px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.tbl-list {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.tbl-list thead tr th {
+    font-weight: bold;
+    background-color: #dfdfdf;
+}
+
+.tbl-list tbody tr td {
+    padding: 2px 15px 2px 15px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.tbl-list tbody tr:hover {
+    background-color: #F9F9F9;
+    cursor: pointer;
+}
+
+.tbl-view {
+    width: 100%;
+}
+
+.tbl-view tbody tr th {
+    background-color: #dfdfdf;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.tbl-view tbody tr td {
+    font-size: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.tbl-write {
+    width: 100%;
+}
+
+.tbl-write tbody tr th {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.tbl-write tbody tr td {
+    font-size: 20px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.input01 {
+    width: 100%;
+    background-color: #D3FFFF;
+    font-size: 20px;
+    border: 1px solid #484848;
+    padding: 10px 15px 10px 15px;
+}
+
+.input01:focus {
+    background-color: #fff;
+}
+
+ul {
+    width: 100%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+}
+
+ul li {
+    float: left;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}

@@ -1,0 +1,37 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'join/css/style.css' %}" />
+<script type="text/javascript" src="{% static 'join/js/join.js' %}"></script>
+<div class="top-box">
+  <a href="{% url 'join:indexView' %}" class="btn-02">뒤로</a>
+  <div class="top-nick">indra</div>
+</div>
+
+<h1>{{ member.mem_id }}</h1>
+<table class="tbl-view">
+  <colgroup>
+    <col width="100px" />
+    <col width="*" />
+  </colgroup>
+  <tbody>
+    <tr>
+      <th>이름</th>
+      <td>{{ member.mem_name }}</td>
+    </tr>
+    <tr>
+      <th>나이</th>
+      <td>{{ member.mem_age }}</td>
+    </tr>
+    <tr>
+      <th>가입일</th>
+      <td>{{ member.mem_join_date|date:'Y-m-d H:i:s'}}</td>
+    </tr>
+    <tr>
+      <th>취미</th>
+      <td>
+        <div>
+          {% for hobby in member.hobby_set.all %} {{ hobby.hobby_text }} {% endfor %}
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -10,10 +10,10 @@ class Member(models.Model) :
     mem_age = models.SmallIntegerField()
     mem_join_date = models.DateTimeField('date published')
 
-    mem_id.verbose_name = "id"
-    mem_name.verbose_name = "이름"
-    mem_age.verbose_name = "나이"
-    mem_join_date.verbose_name = "가입일"
+    #mem_id.verbose_name = "id"
+    #mem_name.verbose_name = "이름"
+    #mem_age.verbose_name = "나이"
+    #mem_join_date.verbose_name = "가입일"
 
     @admin.display(
         boolean=True,
@@ -33,7 +33,7 @@ class Hobby(models.Model) :
     member = models.ForeignKey(Member, on_delete=models.CASCADE)
     hobby_text = models.CharField(max_length=200)
 
-    hobby_text.verbose_name = "취미"
+    #hobby_text.verbose_name = "취미"
 
     def __str__(self) :
         return self.hobby_text    

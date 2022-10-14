@@ -13,6 +13,12 @@ class indexView(generic.ListView):
     context_object_name = 'member_list'
 
     def get_queryset(self) :
+
+        """
+        return Member.objects.filter(
+            mem_join_date__lte=timezone.now()
+        ).order_by('-mem_join_date')[:5]
+        """
         return Member.objects.order_by('-mem_join_date')[:5]
 
 class detailView(generic.DetailView) :
